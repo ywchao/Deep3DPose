@@ -3,10 +3,12 @@
 clear
 clc
 
+addpath('io');
+
 %%
 %scape
 
-% male£¡
+% maleï¿½ï¿½
 addpath(genpath('../prepare/scape/MATLAB_daz_m_srf'));
 
 Meta.instance.readA;
@@ -47,7 +49,8 @@ for skel_id = 1:100:sknum
     R = jointsRR(:, :, 16, skel_id);
     
     % generate points
-    points = Body(RR, shapepara).points;
+    body = Body(RR, shapepara);
+    points = body.points;
     
     % rot to original pose
     % p = R'*points';

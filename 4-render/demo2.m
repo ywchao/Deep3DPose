@@ -3,14 +3,14 @@
 clear
 clc
 
-slash = '\';
-abstractpath = 'D:\zcode\github\Deep3DPose-1-skel';
+slash = '/';
+abstractpath = '..';
 
 %%
 % global variable
 
 % Blender path
-g_blender_path = 'D:\zcode\github\blender-2.76b-windows64\blender';
+g_blender_path = '/z/ywchao/tools/blender-2.78a-linux-glibc211-x86_64/blender';
 
 % Render meta data
 g_model_obj_filelists_folder = '.';
@@ -75,7 +75,7 @@ for i = 1:modelnum
     modelId = strsp{1};
     
     objFile = strsp{2};
-    objFile = strrep(objFile, '/', '\');
+    % objFile = strrep(objFile, '/', '\');
     
     renderFolder = [renderRootFolder slash modelId];
     if ~exist(renderFolder, 'dir')
